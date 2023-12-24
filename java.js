@@ -12,8 +12,9 @@ for (let i = 1; i <= size*size && size<=100; i++) {
 let divs = document.querySelectorAll('div div')
 divs.forEach((div) => {
     div.addEventListener('mouseenter',(e) => {
+        let i = div.style.opacity
         div.style.backgroundColor = `rgb(${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)}`
-        div.style.opacity = i++
+        div.style.opacity = +i + 0.1
     })
 })}
 
