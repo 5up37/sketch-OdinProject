@@ -2,6 +2,7 @@ let container = document.querySelector('.container')
 container.style.cssText = 'display: flex; flex-wrap: wrap; height: 960px; width:960px'
 let body = document.querySelector('body')
 
+
 function createGrid(size) {
 for (let i = 1; i <= size*size && size<=100; i++) {
     let div = document.createElement('div')
@@ -11,7 +12,8 @@ for (let i = 1; i <= size*size && size<=100; i++) {
 let divs = document.querySelectorAll('div div')
 divs.forEach((div) => {
     div.addEventListener('mouseenter',(e) => {
-        div.style.backgroundColor = 'white'
+        div.style.backgroundColor = `rgb(${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)}`
+        div.style.opacity = i++
     })
 })}
 
